@@ -1,3 +1,85 @@
+/* --- Стиль для ссылок-иконок --- */
+
+/* Общие стили для всех ссылок-иконок */
+.icon-link {
+    display: inline-flex; /* Используем flex для центрирования иконки */
+    justify-content: center;
+    align-items: center;
+    /* Увеличенные размеры контейнера */
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%; /* Круглая форма по умолчанию */
+    text-decoration: none;
+    margin: 0 15px;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Увеличенный размер самой иконки */
+    font-size: 32px; 
+    border: 2px solid; /* Общая рамка, цвет зададим ниже */
+    color: var(--accent-color);
+}
+
+.icon-link:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    transform: translateY(-4px); /* Эффект подъема при наведении */
+    box-shadow: 0 6px 15px rgba(102, 252, 241, 0.3);
+}
+
+/* Стилизация иконок в секции Контакты */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 30px;
+}
+
+/* Переопределение цвета для Email (Envelope) */
+.email-icon {
+    border-color: #DB4437; /* Красный для Email */
+    color: #DB4437;
+}
+
+.email-icon:hover {
+    background-color: #DB4437;
+    color: white;
+}
+
+/* Переопределение цвета для Telegram */
+.telegram-icon {
+    border-color: #0088CC;
+    color: #0088CC;
+}
+
+.telegram-icon:hover {
+    background-color: #0088CC;
+    color: white;
+}
+
+
+/* Стилизация иконок в карточках проектов (GitHub) */
+.project-card a.icon-link {
+    display: block; /* Сделать ссылку блочной, чтобы она занимала место */
+    width: 40px; 
+    height: 40px;
+    font-size: 20px; 
+    margin: 15px 0 0 auto; /* Располагаем справа внизу */
+    border-radius: 5px; /* Квадратная форма для GitHub */
+    
+    /* Используем основные акцентные цвета для GitHub */
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.project-card a.icon-link:hover {
+    /* Переопределение стилей для ховера на GitHub */
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 4px 10px rgba(102, 252, 241, 0.5);
+    transform: translateY(-2px);
+}
+
+
+
 /* --- Основа и сброс стилей --- */
 :root {
     --bg-color: #1f2833;      /* Темно-синий/серый фон */
